@@ -11,12 +11,15 @@ public class CoinTest {
     Coin onePence;
     Coin twoPence;
     Coin tenPence;
+
+    Coin fivePence;
     CoinReturn coinReturn;
 
     @Before
     public void before(){
         onePence = new Coin(CoinType.ONEPENCE);
         twoPence = new Coin(CoinType.TWOPENCE);
+        fivePence = new Coin(CoinType.FIVEPENCE);
         tenPence = new Coin(CoinType.TENPENCE);
         coinReturn = new CoinReturn();
     }
