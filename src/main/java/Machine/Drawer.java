@@ -34,5 +34,9 @@ public class Drawer {
         return this.items.size();
     }
 
+    public Product vendProduct(){
+        return this.items.remove(0);
+    }
+
 
 }
