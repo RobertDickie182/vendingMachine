@@ -1,5 +1,7 @@
 package Machine;
 
+import Products.Product;
+
 import java.util.ArrayList;
 
 public class VendingMachine {
@@ -32,6 +34,16 @@ public class VendingMachine {
         } else {
             this.coinReturn.addCoin(coin);
         }
+    }
+
+    public Product vend(DrawerCode code){
+        for (Drawer drawer : this.drawers){
+            if (code == drawer.getCode() && this.credit >= drawer.getPrice()){
+                this.credit = 0.0;
+                return drawer.vendProduct();
+            }
+        }
+        return null;
     }
 
 
