@@ -1,7 +1,16 @@
 package Products;
 
 public class Crisps extends Product {
-    public Crisps(String name, String brand) {
-        super(name, brand);
+
+    private String flavour;
+
+
+    public Crisps(String name, String flavour) {
+        super(name);
+        this.flavour = flavour;
+    }
+
+    public String getFlavour() {
+        return flavour;
     }
 }
