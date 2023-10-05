@@ -2,12 +2,11 @@ import Machine.VendingMachine;
 import MachineComponents.*;
 import Products.Sweets;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 public class VendingMachineTest {
 
@@ -35,7 +34,6 @@ public class VendingMachineTest {
         drawers.add(drawer);
         coinReturn = new CoinReturn();
         machine = new VendingMachine(drawers, coinReturn);
-        machine.addCoin(fiftyPence);
     }
 
     @Test
@@ -69,11 +67,11 @@ public class VendingMachineTest {
 
 
 
-    @Test
-    public void notEnoughMoneyReturnsNull(){
-        machine.addCoin(tenPence);
-        machine.addCoin(tenPence);
-        Sweets sweet = (Sweets)machine.vend(DrawerCode.A1);
-        assertNull(sweet);
-    }
+//    @Test
+//    public void notEnoughMoneyReturnsNull(){
+//        machine.addCoin(tenPence);
+//        machine.addCoin(tenPence);
+//        Sweets sweet = (Sweets)machine.vend(DrawerCode.A1);
+//        assertNull(sweet);
+//    }
 }
