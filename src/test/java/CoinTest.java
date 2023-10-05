@@ -1,6 +1,6 @@
-import Machine.Coin;
-import Machine.CoinReturn;
-import Machine.CoinType;
+import MachineComponents.Coin;
+import MachineComponents.CoinReturn;
+import MachineComponents.CoinType;
 import org.junit.Before;
 import org.junit.Test;
 

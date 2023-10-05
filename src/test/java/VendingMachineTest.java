@@ -1,4 +1,5 @@
-import Machine.*;
+import Machine.VendingMachine;
+import MachineComponents.*;
 import Products.Sweets;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
@@ -34,6 +35,7 @@ public class VendingMachineTest {
         drawers.add(drawer);
         coinReturn = new CoinReturn();
         machine = new VendingMachine(drawers, coinReturn);
+        machine.addCoin(fiftyPence);
     }
 
     @Test

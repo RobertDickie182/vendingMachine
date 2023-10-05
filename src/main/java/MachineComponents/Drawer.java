@@ -1,4 +1,4 @@
-package Machine;
+package MachineComponents;
 
 import Products.Product;
 

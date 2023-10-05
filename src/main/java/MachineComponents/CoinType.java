@@ -1,4 +1,4 @@
-package Machine;
+package MachineComponents;
 
 public enum CoinType {
     ONEPENCE(0.01),

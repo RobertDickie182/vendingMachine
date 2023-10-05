@@ -1,11 +1,11 @@
 package Machine;
 
+import MachineComponents.*;
 import Products.Product;
 
 import java.util.ArrayList;
 
 public class VendingMachine {
-
     private ArrayList<Drawer> drawers;
     private double credit;
     private CoinReturn coinReturn;
@@ -14,6 +14,14 @@ public class VendingMachine {
         this.drawers = drawers;
         this.credit = 0.0;
         this.coinReturn = coinReturn;
+    }
+
+    public void addCoin(Coin coin){
+        if(checkCoinValid(coin)){
+            this.credit += coin.getValue();
+        } else {
+            this.coinReturn.addCoin(coin);
+        }
     }
 
     public double getCredit() {
@@ -28,13 +36,6 @@ public class VendingMachine {
         return coin.getType() != CoinType.ONEPENCE && coin.getType() != CoinType.TWOPENCE;
     }
 
-    public void addCoin(Coin coin){
-        if(checkCoinValid(coin)){
-            this.credit += coin.getValue();
-        } else {
-            this.coinReturn.addCoin(coin);
-        }
-    }
 
     public Product vend(DrawerCode code){
         for (Drawer drawer : this.drawers){
@@ -45,6 +46,5 @@ public class VendingMachine {
         }
         return null;
     }
-
 
 }

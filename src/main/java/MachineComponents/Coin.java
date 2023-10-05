@@ -1,4 +1,4 @@
-package Machine;
+package MachineComponents;
 
 public class Coin {
 

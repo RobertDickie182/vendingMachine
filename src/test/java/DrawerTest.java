@@ -1,5 +1,5 @@
-import Machine.Drawer;
-import Machine.DrawerCode;
+import MachineComponents.Drawer;
+import MachineComponents.DrawerCode;
 import Products.Sweets;
 import org.junit.Before;
 import org.junit.Test;
